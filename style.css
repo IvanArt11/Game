@@ -1,90 +1,141 @@
+@font-face {
+  font-family: "StratosSkyeng";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/Web fonts/stratosskyengweb-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "StratosSkyeng";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/Web fonts/stratosskyengweb-medium.woff2") format("woff2");
+}
 * {
   margin: 0;
   padding: 0;
   color: inherit;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'StratosSkyeng';
-    border-color: #E5E5E5;
+  font-family: "StratosSkyeng", sans-serif;
 }
 
-.level-block {
-    margin: 158px 272px;
-    background-color: #C2F5FF;
-    max-width: 480px;
-    min-width: 208px;
-    max-width: 459px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 52px 69px 48px 69px;
-}
-
-.title {
-    flex-wrap: wrap;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #004980;
-    width: 208px;
-    height: 96px;
-    margin-bottom: 48px;
-}
-
-.level-choosing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-bottom: 67px;
+.container {
+  background: #004980;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .level {
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 12px;
-    width: 98px;
-    height: 98px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    text-align: center;
-    color: #0080C1;
-    transition: scale .3s;
+  background: #c2f5ff;
+  padding: 52px 69px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  gap: 48px;
+}
+.level__text {
+  width: 208px;
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #004980;
+}
+.level__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 68px;
+}
+.level__choosing {
+  display: flex;
+  gap: 26px;
+}
+.level__value {
+  font-family: "StratosSkyeng";
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  color: #0080c1;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.level__value:hover {
+  transform: scale(1.05);
+}
+.level__input {
+  display: none;
+}
+.level__input:checked + span {
+  border: 2px solid #004980;
+  border-radius: 12px;
+  opacity: 0.75;
+}
+.level__value span {
+  padding: 13px 33px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+.level__start {
+  width: 246px;
+  height: 50px;
+  background: #7ac100;
+  border: none;
+  border-radius: 12px;
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.level__start:hover {
+  opacity: 0.8;
 }
 
-.level:hover {
-    cursor: pointer;
-    scale: 1.05;
+@media (max-width: 767px) {
+  .level {
+    padding: 30px;
+  }
+  .level__text {
+    font-size: 32px;
+  }
+  .level__choosing {
+    gap: 10px;
+  }
+  .level__value {
+    padding: 5px 30px;
+    font-size: 48px;
+  }
 }
-
-.level-button {
-    box-sizing: border-box;
-    border: none    ;
-    width: 246px;
-    height: 50px;
-    background: #7AC100;
-    border-radius: 12px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
-    transition: scale .3s;
-}
-
-.level-button:hover {
-    cursor: pointer;
-    scale: 1.03;
-}
-
+@media (max-width: 499px) {
+  .level {
+    padding: 30px 16px;
+  }
+  .level__text {
+    font-size: 28px;
+  }
+  .level__value {
+    padding: 0px;
+    font-size: 40px;
+  }
+  .level__start {
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
