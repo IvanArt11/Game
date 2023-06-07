@@ -109,6 +109,69 @@ body {
   transform: scale(1.02);
 }
 
+.header {
+  width: 100%;
+  margin: 30px 0 46px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-game {
+  width: 246px;
+  height: 50px;
+  background: #7ac100;
+  border: none;
+  border-radius: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.new-game:hover {
+  opacity: 0.7;
+}
+
+.timer__text {
+  padding-right: 4px;
+  display: flex;
+  justify-content: end;
+  gap: 57px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 10px;
+  color: #fff;
+}
+.timer__counter {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 72px;
+  color: #fff;
+}
+
+.game {
+  max-width: 1024px;
+}
+.game__field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.game__card {
+  border-radius: 4px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.game__card:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 767px) {
   .level {
     padding: 30px;
@@ -122,6 +185,31 @@ body {
   .level__value {
     padding: 5px 30px;
     font-size: 48px;
+  }
+  .level .level {
+    padding: 30px 16px;
+  }
+  .level .level__text {
+    font-size: 32px;
+  }
+  .level .level__choosing {
+    gap: 10px;
+  }
+  .level .level__value {
+    padding: 5px 30px;
+    font-size: 40px;
+  }
+  .level .new-game {
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .level .header {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    gap: 20px;
   }
 }
 @media (max-width: 499px) {

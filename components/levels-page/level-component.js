@@ -3,7 +3,7 @@ import { goToPage } from "/index.js";
 export let level = 0;
 
 export const LevelsPage = (app) => {
-    app.innerHTML += `
+  app.innerHTML += `
         <div class="container">
             <div class="level">
                 <h2 class="level__text">Выбери сложность</h2>
@@ -29,24 +29,22 @@ export const LevelsPage = (app) => {
             </div>
         </div>
     `;
-  
-    // Перехват события отправки формы
-    document
-      .querySelector(".level__form")
-      .addEventListener("submit", (event) => {
-            //Отмена действия браузера
-            event.preventDefault();
-            
-            const levelButtons = document.querySelectorAll(".level__input");
-            for (let levelButton of levelButtons) {
-                if (levelButton.checked) {
-                    level = levelButton.value;
-                    goToPage("Game");
-                    break;
-                }
-            }
-            if (!level) {
-                alert("Выбери сначала уровень сложности игры");
-            }
-        });
+
+  // Перехват события отправки формы
+  document.querySelector(".level__form").addEventListener("submit", (event) => {
+    //Отмена действия браузера
+    event.preventDefault();
+
+    const levelButtons = document.querySelectorAll(".level__input");
+    for (let levelButton of levelButtons) {
+      if (levelButton.checked) {
+        level = levelButton.value;
+        goToPage("Game");
+        break;
+      }
+    }
+    if (!level) {
+      alert("Выбери сначала уровень сложности игры");
+    }
+  });
 };

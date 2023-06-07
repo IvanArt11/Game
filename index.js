@@ -11,16 +11,16 @@ export const goToPage = (newPage) => {
 
 const renderApp = () => {
   switch (page) {
-        case "level":
-            LevelsPage(app);
-            break;
-        case "Game":
-            Game(app);
-            break;
-        default:
-            console.log("Ошибка 404");
-        break;
-    }
+    case "level":
+      LevelsPage(app);
+      break;
+    case "Game":
+      Game(app);
+      break;
+    default:
+      console.log("Ошибка 404");
+      break;
+  }
 };
 
 renderApp();
