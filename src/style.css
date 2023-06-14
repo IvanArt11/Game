@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('./assets/fonts/Web fonts/stratosskyengweb-regular.woff2')
+        format('woff2');
+}
+
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('./assets/fonts/Web fonts/stratosskyengweb-medium.woff2')
+        format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'StratosSkyeng', sans-serif;
+}
+
+.container {
+    background: #004980;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.level {
+    background: #c2f5ff;
+    padding: 52px 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    gap: 48px;
+}
+
+.level__text {
+    width: 208px;
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #004980;
+}
+
+.level__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 68px;
+}
+
+.level__choosing {
+    display: flex;
+    gap: 26px;
+}
+
+.level__value {
+    font-family: 'StratosSkyeng';
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.level__value:hover {
+    transform: scale(1.05);
+}
+
+.level__input {
+    display: none;
+}
+
+.level__input:checked + span {
+    border: 2px solid #004980;
+    border-radius: 12px;
+    opacity: 0.75;
+}
+
+.level__value span {
+    padding: 13px 33px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.level__start {
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    border: none;
+    border-radius: 12px;
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.level__start:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+    .level {
+        padding: 30px;
+    }
+
+    .level__text {
+        font-size: 32px;
+    }
+
+    .level__choosing {
+        gap: 10px;
+    }
+
+    .level__value {
+        padding: 5px 30px;
+        font-size: 48px;
+    }
+
+    .level .level {
+        padding: 30px 16px;
+    }
+
+    .level .level__text {
+        font-size: 32px;
+    }
+
+    .level .level__choosing {
+        gap: 10px;
+    }
+
+    .level .level__value {
+        padding: 5px 30px;
+        font-size: 40px;
+    }
+
+    .level .new-game {
+        width: 170px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .level .header {
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 499px) {
+    .level {
+        padding: 30px 16px;
+    }
+
+    .level__text {
+        font-size: 28px;
+    }
+
+    .level__value {
+        padding: 0;
+        font-size: 40px;
+    }
+
+    .level__start {
+        font-size: 20px;
+        width: 180px;
+        height: 40px;
+    }
+}
+
+.header {
+    width: 100%;
+    margin: 30px 0 46px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-game {
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    border: none;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.new-game:hover {
+    opacity: 0.7;
+}
+
+.timer__text {
+    padding-right: 4px;
+    display: flex;
+    justify-content: end;
+    gap: 57px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 10px;
+    color: #fff;
+}
+
+.timer__counter {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #fff;
+}
+
+.game {
+    max-width: 1024px;
+}
+
+.game__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.game__card {
+    border-radius: 4px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.game__card:hover {
+    transform: scale(1.1);
+} /*# sourceMappingURL=style.css.map */

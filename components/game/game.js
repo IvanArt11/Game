@@ -1,6 +1,7 @@
-import { level } from "../levels-page/level-component.js";
+import { level } from '../levels-page/level-component.js'
 
 // Константы для хранения значений мастей и рангов карт
+/*
 const cards = [
     `<img class="game__card" src="./assets/images/туз пики.jpg" alt="A spades"/>`,
     `<img class="game__card" src="./assets/images/король пики.jpg" alt="K spades"/>`,
@@ -42,65 +43,72 @@ const cards = [
     `<img class="game__card" src="./assets/images/7 крести.jpg" alt="7 clubs"/>`,
     `<img class="game__card" src="./assets/images/6 крести.jpg" alt="6 clubs"/>`,
 ];
+*/
 // const suits = ['черви', 'бубны', 'крести', 'пики'];
 // const ranks = ['6', '7', '8', '9', '10', 'Q', 'K', 'J', 'A'];
 
-let cardsArr = []; // Массив для хранения сгенерированных карт
-let selectedDifficulty = "1"; // Уровень сложности по умолчанию
-let flippedCards = []; // Массив для хранения перевернутых карт
-let matchedCards = []; // Массив для хранения совпавших карт
-let gameStarted = false; // Флаг для проверки начала игры
-let startTime; // Время начала игры
+let cardsArr = [] // Массив для хранения сгенерированных карт
+/*
+let selectedDifficulty = '1' // Уровень сложности по умолчанию
+let flippedCards = [] // Массив для хранения перевернутых карт
+let matchedCards = [] // Массив для хранения совпавших карт
+let gameStarted = false // Флаг для проверки начала игры
+let startTime // Время начала игры
+*/
 
 // Функция для перемешивания массива
+/*
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+*/
 
 // Функция для генерации карт
+/*
 function generateCards(difficulty) {
-    cards = [];
-    const totalPairs = difficulty === "1" ? 6 : difficulty === "2" ? 12 : 18;
-    const selectedCards = suits.slice(0, totalPairs);
+    cards = []
+    const totalPairs = difficulty === "1" ? 6 : difficulty === "2" ? 12 : 18
+    const selectedCards = suits.slice(0, totalPairs)
     // const selectedSuits = suits.slice(0, totalPairs);
     // const selectedRanks = ranks.slice(0, totalPairs);
 
     for (let i = 0; i < totalPairs; i++) {
-        const card1 = { cards: selectedCards[i] };
-        const card2 = { cards: selectedCards[i] };
+        const card1 = { cards: selectedCards[i] }
+        const card2 = { cards: selectedCards[i] }
         // const card1 = { suit: selectedSuits[i], rank: selectedRanks[i] };
         // const card2 = { suit: selectedSuits[i], rank: selectedRanks[i] };
-        cards.push(card1, card2);
+        cards.push(card1, card2)
     }
 
-    shuffleArray(cards);
+    shuffleArray(cards)
 }
+*/
 
 const cardsArray = (numbers) => {
     for (let i = 0; i < numbers; i++) {
         cardsArr.push(
             `<img class="game__card" src="./assets/images/рубашка.jpg" alt="card"/>`
-        );
+        )
     }
-};
+}
 
 export const Game = (app) => {
     // опции сложности
     switch (level) {
-        case "1":
-            cardsArray(6);
-            break;
-        case "2":
-            cardsArray(12);
-            break;
-        case "3":
-            cardsArray(18);
-            break;
+        case '1':
+            cardsArray(6)
+            break
+        case '2':
+            cardsArray(12)
+            break
+        case '3':
+            cardsArray(18)
+            break
         default:
-            break;
+            break
     }
 
     app.innerHTML = `
@@ -118,10 +126,10 @@ export const Game = (app) => {
         </div>
         <main class="game-wrap">
             <div class="game__field">
-                ${cardsArr.map((card) => card).join("")}
+                ${cardsArr.map((card) => card).join('')}
             </div>
         </main>
       </div>
     </div>
-  `;
-};
+  `
+}
