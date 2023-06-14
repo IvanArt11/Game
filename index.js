@@ -5,22 +5,22 @@ const app = document.getElementById("root");
 let page = "level";
 
 export const goToPage = (newPage) => {
-  page = newPage;
-  renderApp();
+    page = newPage;
+    renderApp();
 };
 
 const renderApp = () => {
-  switch (page) {
-    case "level":
-      LevelsPage(app);
-      break;
-    case "Game":
-      Game(app);
-      break;
-    default:
-      console.log("Ошибка 404");
-      break;
-  }
+    switch (page) {
+        case "level":
+            LevelsPage(app);
+            break;
+        case "Game":
+            Game(app);
+            break;
+        default:
+            console.log("Ошибка 404");
+            break;
+    }
 };
 
 renderApp();
