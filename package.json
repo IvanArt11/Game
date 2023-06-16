@@ -20,7 +20,7 @@
         "format": "prettier --write ./components/",
         "lint:js": "eslint ./components/**/*.js",
         "lint:css": "stylelint ./**/*.css",
-        "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
+        "stylelint:fix": "stylelint **/*{.css,.scss} --fix",
         "prepare": "husky install",
         "lint": "npm run lint:js && npm run lint:css"
     },
