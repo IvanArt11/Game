@@ -1,0 +1,49 @@
+//tablet
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    //difficulty
+    .difficulty {
+        padding: 30px 16px;
+        &__text {
+            font-size: 32px;
+        }
+        &__value-wrap {
+            gap: 10px;
+        }
+        &__value {
+            padding: 5px 30px;
+            font-size: 40px;
+        }
+    }
+
+    // game field
+    .new-game {
+        width: 170px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+// mobile
+@media (max-width: 375px) {
+    //difficulty
+    .difficulty {
+        &__value-wrap {
+            gap: 10px;
+        }
+        &__value {
+            padding: 0 20px;
+            font-size: 32px;
+        }
+    }
+}
