@@ -37,7 +37,10 @@ module.exports = {
         new MiniCssExtractPlugin(),
 
         new CopyWebpackPlugin({
-            patterns: [{ from: 'assets/images', to: 'images' }],
+            patterns: [
+                { from: 'assets/images', to: 'images' },
+                { from: 'styles/style.css', to: 'style.css' },
+            ],
         }),
     ],
     optimization: {
