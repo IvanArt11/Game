@@ -25,7 +25,7 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\. (woff|woff2|eotIttflotf)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
         ],
@@ -38,8 +38,8 @@ module.exports = {
 
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'assets/images', to: 'images' },
-                { from: 'styles/style.css', to: 'style.css' },
+                { from: './assets', to: 'assets' },
+                { from: './styles/style.css', to: 'style.css' },
             ],
         }),
     ],
