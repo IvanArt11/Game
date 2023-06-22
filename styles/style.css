@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/Web fonts/stratosskyengweb-regular.woff2')
+        format('woff2');
+}
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/Web fonts/stratosskyengweb-medium.woff2')
+        format('woff2');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'StratosSkyeng';
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    background: #004980;
+    padding: 20px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.difficulty {
+    margin: auto;
+    background: #c2f5ff;
+    padding: 52px 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    gap: 48px;
+}
+.difficulty__text {
+    width: 208px;
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #004980;
+}
+.difficulty__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 68px;
+}
+.difficulty__value-wrap {
+    display: flex;
+    gap: 26px;
+}
+.difficulty__value {
+    padding: 13px 33px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #0080c1;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.difficulty__value input[type='radio'] {
+    display: none;
+}
+.difficulty__value:hover {
+    transform: scale(1.1);
+}
+.difficulty__value--active {
+    border: 2px solid #004980;
+}
+.difficulty__start {
+    width: 246px;
+    height: 50px;
+    background: #969696;
+    border: none;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+}
+.difficulty__start--active {
+    background: #7ac100;
+    cursor: pointer;
+}
+.difficulty__start--active:hover {
+    opacity: 0.7;
+}
+
+.header {
+    width: 100%;
+    margin: 30px 0 46px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-game {
+    width: 246px;
+    height: 50px;
+    background: #969696;
+    border: none;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+}
+.new-game--active {
+    background: #7ac100;
+    cursor: pointer;
+}
+.new-game--active:hover {
+    opacity: 0.7;
+}
+
+.timer__text {
+    padding-right: 4px;
+    display: flex;
+    justify-content: end;
+    gap: 57px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 10px;
+    color: #fff;
+}
+.timer__counter {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #fff;
+}
+
+.game {
+    max-width: 1024px;
+}
+.game__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.game__card {
+    border-radius: 4px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.game__card:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .difficulty {
+        padding: 30px 16px;
+    }
+    .difficulty__text {
+        font-size: 32px;
+    }
+    .difficulty__value-wrap {
+        gap: 10px;
+    }
+    .difficulty__value {
+        padding: 5px 30px;
+        font-size: 40px;
+    }
+    .new-game {
+        width: 170px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 375px) {
+    .difficulty__value-wrap {
+        gap: 10px;
+    }
+    .difficulty__value {
+        padding: 0 20px;
+        font-size: 32px;
+    }
+} /*# sourceMappingURL=style.css.map */

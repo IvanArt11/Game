@@ -1,8 +1,8 @@
-import { LevelsPage } from './components/levels-page/level-component.js'
+import { DifficultyPage } from './components/difficulty/difficulty-component.js'
 import { Game } from './components/game/game.js'
 
 const app = document.getElementById('root')
-let page = 'level'
+let page = 'Difficulty'
 
 export const goToPage = (newPage) => {
     page = newPage
@@ -11,16 +11,17 @@ export const goToPage = (newPage) => {
 
 const renderApp = () => {
     switch (page) {
-        case 'level':
-            LevelsPage(app)
+        case 'Difficulty':
+            DifficultyPage(app)
             break
         case 'Game':
             Game(app)
             break
         default:
-            console.log('Ошибка 404')
+            console.log('404')
             break
     }
 }
 
+// start
 renderApp()

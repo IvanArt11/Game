@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/Web\ fonts/stratosskyengweb-regular.woff2')
+        format('woff2');
+}
+
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/Web\ fonts/stratosskyengweb-medium.woff2')
+        format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'StratosSkyeng';
+}
+
+li {
+    list-style: none;
+}
+.container {
+    background: #004980;
+    padding: 20px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@import '../components/difficulty/difficulty';
+@import '../components/game/game';
+@import './adaptive';
