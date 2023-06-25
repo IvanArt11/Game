@@ -32,6 +32,13 @@
         justify-content: center;
         gap: 20px;
     }
+
+    // end game
+    .end {
+        &__wrap {
+            padding: 20px 40px;
+        }
+    }
 }
 
 // mobile
@@ -43,6 +50,17 @@
         }
         &__value {
             padding: 0 20px;
+            font-size: 32px;
+        }
+    }
+
+    //end game
+    .end {
+        &__wrap {
+            padding: 20px;
+        }
+
+        &__status {
             font-size: 32px;
         }
     }

@@ -203,6 +203,9 @@ li {
         justify-content: center;
         gap: 20px;
     }
+    .end__wrap {
+        padding: 20px 40px;
+    }
 }
 @media (max-width: 375px) {
     .difficulty__value-wrap {
@@ -210,6 +213,12 @@ li {
     }
     .difficulty__value {
         padding: 0 20px;
+        font-size: 32px;
+    }
+    .end__wrap {
+        padding: 20px;
+    }
+    .end__status {
         font-size: 32px;
     }
 }
