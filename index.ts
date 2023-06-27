@@ -1,10 +1,11 @@
-import { DifficultyPage } from './components/difficulty/difficulty-component.js'
-import { Game } from './components/game/game.js'
+import { DifficultyPage } from './components/difficulty/difficulty-component'
+import { Game } from './components/game/game'
+import * as _ from 'lodash'
 
-const app = document.getElementById('root')
+const app: HTMLElement = document.getElementById('root')!
 let page = 'Difficulty'
 
-export const goToPage = (newPage) => {
+export const goToPage = (newPage: string) => {
     page = newPage
     renderApp()
 }
