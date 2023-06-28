@@ -22,7 +22,7 @@
 
 ## В данном проекте были применены следующие технологии и интсрументы:
 
-- (#JavaScript)
+- [JavaScript]
 
 - [TypeScript](#TypeScript)
 
