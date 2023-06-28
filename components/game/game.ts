@@ -8,7 +8,7 @@ interface Card {
 }
 let arrCards: Array<string> = []
 
-const getSuit = (num: number) => {
+export const getSuit = (num: number) => {
     switch (num) {
         case 1:
             return 'spades'
@@ -22,7 +22,7 @@ const getSuit = (num: number) => {
             return 'error'
     }
 }
-const getRank = (num: number) => {
+export const getRank = (num: number) => {
     switch (num) {
         case 6:
             return 'six'
@@ -139,10 +139,13 @@ const startGame = () => {
         })
     })
 }
-const fillCardsArray = (numbers: number) => {
+export const fillCardsArray = (numbers: number, arrCards: string[]) => {
     // генерация карт
     let rank = ''
     let suit = ''
+    if (numbers > 72) {
+        numbers = 72
+    }
     for (let i = 0; i < numbers / 2; i++) {
         // проверка на больше одной пары одинаковых карт в игре
         do {
@@ -155,23 +158,35 @@ const fillCardsArray = (numbers: number) => {
         )
 
         let card = `<img data-value="${rank}-of-${suit}" class="game__card" src="../../assets/images/${rank}-of-${suit}.jpg" alt="card"/>`
-        arrCards.push(card)
 
-        // добавляем пару
-        let index = Math.floor(Math.random() * numbers) + 1
-
-        // поиск случайного места для пары
+        // Поиск пустого случайного слота
+        let index = Math.floor(Math.random() * numbers)
         let isFindSlot = false
-        while (!isFindSlot) {
+        do {
             if (!arrCards[index]) {
                 arrCards[index] = card
                 isFindSlot = true
-            } else if (index === numbers) {
-                index = 1
+            } else if (index === numbers - 1) {
+                index = 0
             } else {
                 index++
             }
-        }
+        } while (!isFindSlot)
+
+        // добавляем пару
+        index = Math.floor(Math.random() * numbers)
+        // поиск случайного места для пары
+        isFindSlot = false
+        do {
+            if (!arrCards[index]) {
+                arrCards[index] = card
+                isFindSlot = true
+            } else if (index === numbers - 1) {
+                index = 0
+            } else {
+                index++
+            }
+        } while (!isFindSlot)
     }
 
     // переворачиваем карты, рубашкой вверх
@@ -188,18 +203,17 @@ export const Game = (app: HTMLElement) => {
     arrCards = []
     switch (difficulty) {
         case 1:
-            fillCardsArray(6)
+            fillCardsArray(6, arrCards)
             break
         case 2:
-            fillCardsArray(12)
+            fillCardsArray(12, arrCards)
             break
         case 3:
-            fillCardsArray(18)
+            fillCardsArray(18, arrCards)
             break
         default:
             break
     }
-
     app.innerHTML = `
     <div class="container">
         <div class="game">
