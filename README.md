@@ -26,17 +26,17 @@
 
 - [TypeScript](https://www.typescriptlang.org/)
 
-- [SCSS](#SCSS)
+- SCSS
   
-- [Webpack](#Webpack)
+- Webpack
 
-- [Jest](#Jest)
+- Jest
 
 ## Перед запуском приложения необходимо убедится, что на компьютере установлены следующие программы:
 
-- [Node.js](#Node.js)
+- Node.js
   
-- [npm (Node Package Manager)](#npm (Node Package Manager))
+- npm (Node Package Manager)
 
 ## Установка
 Для установки необходимых пакетов приложения выполните следующую команду в терминале:
