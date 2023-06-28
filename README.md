@@ -24,7 +24,7 @@
 
 - [JavaScript](#JavaScript)
 
-- [TypeScript](#TypeScript)
+- [TypeScript](https://www.typescriptlang.org/)
 
 - [SCSS](#SCSS)
   
